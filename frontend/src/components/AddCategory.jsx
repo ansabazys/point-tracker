@@ -52,9 +52,7 @@ const AddCategory = ({ setLoading, setCategories }) => {
         "https://point-tracker-api.vercel.app/api/categories",
         formData,
         {
-          headers: {
-            Authorization: `Bearer ${admin}`,
-          },
+          withCredentials: true
         }
       );
 
