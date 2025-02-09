@@ -34,11 +34,12 @@ const GroupDetailPage = () => {
       const response = await axios.get(
         `https://point-tracker-api.vercel.app/api/groups/${id}/total-points`
       );
-      setTotalPoints(response.data.point);
+      setTotalPoints(response.data.totalPoints);
     } catch (error) {
       console.error("Error fetching total points:", error);
     }
   };
+
 
   useEffect(() => {
     setLoading(true);
@@ -68,7 +69,7 @@ const GroupDetailPage = () => {
           <h1 className="text-3xl font-bold text-gray-900">{group?.name}</h1>
           <p className="text-gray-600 leading-6 m-0">{group?.description}</p>
           <p className="text-xl font-semibold m-0 mt-2 text-green-600">
-            Total Points: {totalPoints}
+            Total Points: {group?.point}
           </p>
         </motion.div>
 
