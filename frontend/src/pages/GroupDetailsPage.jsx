@@ -68,7 +68,7 @@ const GroupDetailPage = () => {
           <h1 className="text-3xl font-bold text-gray-900">{group?.name}</h1>
           <p className="text-gray-600 leading-6 m-0">{group?.description}</p>
           <p className="text-xl font-semibold m-0 mt-2 text-green-600">
-            Total Points: {group?.point}
+            Total Points: {totalPoints}
           </p>
         </motion.div>
 
