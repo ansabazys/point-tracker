@@ -31,7 +31,7 @@ export const calculateTotalPoints = async (req, res) => {
       return res.status(404).json({ message: "Group not found or has no categories" });
     }
 
-    const totalPoints = groupWithPoints[0].totalPoints || 0; // Ensure it defaults to 0
+    const point = groupWithPoints[0].totalPoints || 0; // Ensure it defaults to 0
 
     // 🔥 Step 2: Update the Group model with total points
     const updatedGroup = await Group.findByIdAndUpdate(
